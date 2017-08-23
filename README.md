@@ -1,9 +1,10 @@
 # docker-cli-forwarding
 Simple request forwarder for the docker-cli that you can service link other containers with. This is primarily useful for dynamic Nvidia volume mounting.
 
+By default, this container runs on port 411.
+
 ## Run this image
 
 ```
-export APP_PORT=5000
-docker run -net=host -p $APP_PORT:$APP_PORT -d baldwinchang/docker-cli-forwarding
+docker run -net=host -d baldwinchang/docker-cli-forwarding
 ```
